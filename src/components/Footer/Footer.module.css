@@ -1,0 +1,132 @@
+.footer {
+    width: 100%;
+    min-height: 288px;
+    padding: 48px 24px 28px;
+
+    background-color: #a8e8d5;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+
+    padding-bottom: 40px;
+}
+
+/* Логотип и описание */
+
+.brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.logo {
+    display: inline-block;
+    transition: opacity 0.2s ease;
+}
+
+.logo:hover {
+    opacity: 0.7;
+}
+
+.logo img {
+    display: block;
+    width: 167px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.description {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Заголовки колонок */
+
+.heading {
+    margin-bottom: 20px;
+
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+/* Ссылки магазина */
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.nav a {
+    color: #292820;
+    font-size: 16px;
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.nav a:hover {
+    color: #287d63;
+}
+
+/* Контакты */
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.contacts .heading {
+    margin-bottom: 8px;
+}
+
+.contacts a,
+.contacts p {
+    color: #292820;
+    font-size: 16px;
+    line-height: 1.5;
+    text-decoration: none;
+}
+
+.contacts a:hover {
+    color: #287d63;
+}
+
+/* Нижняя строка */
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 24px;
+    border-top: 1px solid #287d63;
+}
+
+.bottom p {
+    color: #292820;
+    font-size: 14px;
+}
+
+/* Адаптивность */
+
+@media (max-width: 760px) {
+    .content {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+}

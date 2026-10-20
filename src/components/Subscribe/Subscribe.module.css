@@ -1,0 +1,146 @@
+.subscribe {
+    padding: 0 24px 72px;
+}
+
+.banner {
+    min-height: 290px;
+    padding: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+
+    background-color: #ffe17b;
+    border-radius: 24px;
+}
+
+/* Левая часть */
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.title {
+    font-family: "Unbounded", sans-serif;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.description {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Правая часть */
+
+.form {
+    width: 573px;
+    max-width: 100%;
+}
+
+.fields {
+    display: flex;
+    gap: 12px;
+}
+
+.input {
+    width: 402px;
+    min-width: 0;
+    height: 56px;
+    padding: 0 20px;
+
+    background-color: #ffffff;
+    border: 1px solid #dedcd2;
+    border-radius: 10px;
+
+    color: #292820;
+    font-size: 16px;
+    outline: none;
+
+    transition: border-color 0.2s ease;
+}
+
+.input:focus {
+    border-color: #287d63;
+}
+
+.input::placeholder {
+    color: #706e65;
+}
+
+.button {
+    width: 159px;
+    height: 56px;
+    flex-shrink: 0;
+
+    border: none;
+    border-radius: 10px;
+
+    background-color: #287d63;
+    color: #ffffff;
+
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: background-color 0.2s ease;
+}
+
+.button:hover {
+    background-color: #20664f;
+}
+
+.agreement {
+    margin-top: 12px;
+    color: #706e65;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Адаптация для небольших экранов */
+
+@media (max-width: 1100px) {
+    .banner {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .input {
+        flex: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    .banner {
+        padding: 28px 20px;
+    }
+
+    .title {
+        font-size: 26px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .description br {
+        display: none;
+    }
+
+    .fields {
+        flex-direction: column;
+    }
+
+    .input,
+    .button {
+        width: 100%;
+    }
+}
