@@ -1,6 +1,6 @@
-import styles from "./Subscribe.module.css";
+import styles from "./Form.module.css";
 
-export function Subscribe() {
+export function Form() {
   return (
     <section className={styles.subscribe}>
       <div className="container">

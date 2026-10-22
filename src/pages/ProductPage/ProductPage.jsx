@@ -1,0 +1,5 @@
+import {Link} from 'react-router';
+import {Catalog} from '../../components/Catalog/Catalog';
+import productImage from '../../assets/product.png';
+import s from './ProductPage.module.css';
+export function ProductPage(){return <div className={s.page}><div className="container"><nav className={s.breadcrumbs}><Link to="/">Главная</Link><span>/</span><Link to="/catalog">Каталог</Link><span>/</span><span>Клубничный мармелад</span></nav><div className={s.product}><img src={productImage} alt="Клубничный мармелад" className={s.image}/><div className={s.details}><span className={s.category}>Мармелад</span><h1>Клубничный мармелад</h1><p className={s.brand}>Lotte Jellycious Gumi Gumi Strawberry</p><p className={s.price}>249 ₽</p><p className={s.description}>Мягкий мармелад с клубничным вкусом — маленькая сладкая пауза среди большого дня. Попробуй сам или подели пакетик с другом.</p><div className={s.feature}><span>Вес</span><b>66 г</b></div><button type="button" className={s.button}>В корзину</button></div></div></div><div className={s.recommended}><div className="container"><h2>С этим тоже вкусно</h2><Catalog showTitle={false} count={4}/></div></div></div>}

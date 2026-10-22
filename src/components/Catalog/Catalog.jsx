@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import styles from "./Catalog.module.css";
 import { CatalogCard } from "./CatalogCard/CatalogCard";
 
@@ -8,10 +9,9 @@ export function Catalog() {
         <div className={styles.header}>
           <h2 className={styles.title}>Хиты из Кореи</h2>
 
-          <a href="#" className={styles.link}>
-            Все вкусняшки
-            <span aria-hidden="true">↗</span>
-          </a>
+          <Link to="/catalog" className={styles.link}>
+              Все вкусняшки <span aria-hidden="true">↗</span>
+            </Link>
         </div>
 
         <div className={styles.cards}>

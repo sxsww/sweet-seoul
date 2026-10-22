@@ -1,0 +1,5 @@
+import {Link} from 'react-router';
+import {Catalog} from '../../components/Catalog/Catalog';
+import s from './CatalogPage.module.css';
+const categories=['Все товары','Конфеты','Мармелад','Печенье','Снеки','Напитки'];
+export function CatalogPage(){return <div className={s.page}><div className="container"><nav className={s.breadcrumbs}><Link to="/">Главная</Link><span>/</span><span>Каталог</span></nav><div className={s.titleRow}><h1>Все вкусняшки</h1><span>8 товаров</span></div><div className={s.controls}><label className={s.search}><span aria-hidden="true">⌕</span><input type="search" placeholder="Найти любимую сладость"/></label><select defaultValue="" aria-label="Сортировка"><option value="" disabled>Сначала дешевле</option><option value="popular">По популярности</option><option value="price">По цене</option></select></div><div className={s.categories}>{categories.map((item,i)=><button key={item} type="button" className={i===0?s.selected:''}>{item}</button>)}</div><Catalog showTitle={false} count={8}/></div></div>}

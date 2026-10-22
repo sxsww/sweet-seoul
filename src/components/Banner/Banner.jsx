@@ -1,7 +1,7 @@
-import styles from "./Hero.module.css";
+import styles from "./Banner.module.css";
 import heroImage from "../../assets/hero.png";
 
-export function Hero() {
+export function Banner() {
   return (
     <section className={styles.hero}>
       <div className="container">
@@ -20,7 +20,7 @@ export function Hero() {
               хорошего настроения.
             </p>
 
-            <a href="#" className={styles.button}>
+            <a href="/catalog" className={styles.button}>
               Перейти в каталог
               <span aria-hidden="true">↗</span>
             </a>

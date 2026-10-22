@@ -1,22 +1,32 @@
+import { Link, NavLink } from "react-router";
 import styles from "./Header.module.css";
 import logo from "../../assets/logo.png";
-
 export function Header() {
   return (
     <header className={styles.header}>
       <div className="container">
         <div className={styles.content}>
-          <a href={import.meta.env.BASE_URL} className={styles.logo}>
+          <Link className={styles.logo} to="/">
             <img src={logo} alt="Сладкий Сеул" />
-          </a>
-
+          </Link>
           <nav className={styles.nav}>
-            <a href={import.meta.env.BASE_URL} className={styles.active}>
+            <NavLink
+              to="/"
+              end
+              className={({ isActive }) =>
+                isActive ? styles.active : undefined
+              }
+            >
               Главная
-            </a>
-
-            <a href="#">Каталог</a>
-            <a href="#">Корзина</a>
+            </NavLink>
+            <NavLink
+              to="/catalog"
+              className={({ isActive }) =>
+                isActive ? styles.active : undefined
+              }
+            >
+              Каталог
+            </NavLink>
           </nav>
         </div>
       </div>
